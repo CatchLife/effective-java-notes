@@ -1,6 +1,6 @@
 var Contents = require('../Contents')
 
-const info = function genContents() {
+const info = (function genContents() {
   let items = []
   let sidebar = {}
   Contents.forEach(content => {
@@ -14,7 +14,7 @@ const info = function genContents() {
     items,
     sidebar
   }
-}()
+})()
 
 module.exports = {
   title: 'effective java notes',
@@ -31,10 +31,12 @@ module.exports = {
     ]
   ],
   themeConfig: {
-    nav: [{
-      text: '章节',
-      items: info.items
-    }],
+    nav: [
+      {
+        text: '章节',
+        items: info.items
+      }
+    ],
     displayAllHeaders: true,
     sidebar: info.sidebar,
     lastUpdated: '最后更新',
