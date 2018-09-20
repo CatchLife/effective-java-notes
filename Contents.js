@@ -6,6 +6,6 @@ module.exports = [{
   {
     text: '创建和销毁对象',
     dir: '2-create-and-destory-objects',
-    items: ['1', '2']
+    items: ['1']
   },
 ]
