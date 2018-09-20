@@ -30,6 +30,7 @@ module.exports = {
       }
     ]
   ],
+  serviceWorker: true,
   themeConfig: {
     nav: [
       {
@@ -37,12 +38,18 @@ module.exports = {
         items: info.items
       }
     ],
+    serviceWorker: {
+      updatePopup: {
+        message: '发现新内容可用',
+        buttonText: '刷新'
+      }
+    },
     displayAllHeaders: true,
     sidebar: info.sidebar,
-    lastUpdated: '最后更新',
-    repo: 'https://gitee.com/catchlife/effective-java-notes.git',
-    repoLabel: 'Git',
-    editLinks: false,
+    lastUpdated: '上次更新',
+    repo: 'CatchLife/effective-java-notes',
+    repoLabel: 'GitHub',
+    editLinks: true,
     editLinkText: '帮助我改正文中错误^_^'
   }
 }
