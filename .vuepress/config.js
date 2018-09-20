@@ -73,12 +73,10 @@ module.exports = {
   ],
   serviceWorker: true,
   themeConfig: {
-    nav: [
-      {
-        text: '章节',
-        items: themeConf.themeItems
-      }
-    ],
+    nav: [{
+      text: '章节',
+      items: themeConf.themeItems
+    }],
     serviceWorker: {
       updatePopup: {
         message: '发现新内容可用',
@@ -91,6 +89,7 @@ module.exports = {
     repo: 'CatchLife/effective-java-notes',
     repoLabel: 'GitHub',
     editLinks: true,
-    editLinkText: '帮助我改正文中错误^_^'
+    editLinkText: '帮助我改正文中错误^_^',
+    // sidebarDepth: 2
   }
 }

@@ -1,6 +1,5 @@
 var shell = require('shelljs')
 
-// 部署
 shell.exec('git add .');
 shell.exec('git commit -m "update"');
 shell.exec('git push origin master');
