@@ -1,24 +1,31 @@
 var fs = require('fs')
 var path = require('path')
 
-var themeConf = function name(params) {
+var themeConf = (function name(params) {
   // 处理目录
-  var titles = ['引言', '创建和销毁对象']
+  var titles = [
+    '第1章 引言',
+    '第2章 创建和销毁对象',
+    '第3章 对于所有对象都通用的方法',
+    '第4章 类和接口',
+    '第5章 泛型',
+    '第6章 枚举和注解'
+  ]
 
-  var rootPath = path.resolve('./');
+  var rootPath = path.resolve('./')
 
   var excludeFileNames = ['.git', '.vuepress', 'node_modules']
 
   var Contents = []
 
-  var i = 0;
+  var i = 0
   var its = []
 
   var dirs = fs.readdirSync(rootPath)
 
   dirs.forEach(dirName => {
     if (excludeFileNames.indexOf(dirName) === -1) {
-      var realDir = path.join(rootPath, dirName);
+      var realDir = path.join(rootPath, dirName)
       var stats = fs.statSync(realDir)
       if (stats.isDirectory()) {
         its = []
@@ -31,7 +38,7 @@ var themeConf = function name(params) {
           dir: dirName,
           items: its
         })
-        i++;
+        i++
       }
     }
   })
@@ -48,7 +55,7 @@ var themeConf = function name(params) {
     themeItems,
     themeSidebar
   }
-}()
+})()
 
 module.exports = {
   title: 'Effective Java Notes',
@@ -66,10 +73,12 @@ module.exports = {
   ],
   serviceWorker: true,
   themeConfig: {
-    nav: [{
-      text: '章节',
-      items: themeConf.themeItems
-    }],
+    nav: [
+      {
+        text: '章节',
+        items: themeConf.themeItems
+      }
+    ],
     serviceWorker: {
       updatePopup: {
         message: '发现新内容可用',
