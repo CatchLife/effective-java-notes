@@ -51,6 +51,9 @@ Contents.forEach(content => {
   themeSidebar[`/${content.dir}/`] = content.items
 })
 
+console.log(themeItems)
+console.log(themeSidebar)
+
 module.exports = {
   title: 'Effective Java Notes',
   description: 'Effective Java 阅读笔记',
