@@ -1,5 +1,5 @@
 ---
-next: ../2-create-and-destory-objects/1
+next: ../2-Creating-and-Destroying-Objects/1
 ---
 
 # 引言
