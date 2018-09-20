@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "deploy": "node deploy.js"
+    "deploy": "node deploy.js",
+    "d": "node deploy.js"
   },
   "devDependencies": {
     "shelljs": "^0.8.2"
