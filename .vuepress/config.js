@@ -99,10 +99,11 @@ module.exports = {
     }],
     serviceWorker: {
       updatePopup: {
-        message: '发现新内容可用',
+        message: '发现新内容更新',
         buttonText: '刷新'
       }
     },
+    sidebarDepth: 0,
     displayAllHeaders: true,
     sidebar: themeConf.themeSidebar,
     lastUpdated: '上次更新',
@@ -110,6 +111,5 @@ module.exports = {
     repoLabel: 'GitHub',
     editLinks: true,
     editLinkText: '帮助我改正文中错误^_^'
-    // sidebarDepth: 2
   }
 }
