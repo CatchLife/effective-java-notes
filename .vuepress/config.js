@@ -67,18 +67,36 @@ module.exports = {
       'link',
       {
         rel: 'shortcut icon',
-        href: '/favicon.ico'
+        href: '/logo.jpg'
       }
-    ]
+    ],
+    ['link', {
+      rel: 'manifest',
+      href: '/manifest.json'
+    }],
+    ['meta', {
+      name: 'theme-color',
+      content: '#3eaf7c'
+    }],
+    ['meta', {
+      name: 'apple-mobile-web-app-capable',
+      content: 'yes'
+    }],
+    ['meta', {
+      name: 'apple-mobile-web-app-status-bar-style',
+      content: 'black'
+    }],
+    ['meta', {
+      name: 'msapplication-TileColor',
+      content: '#000000'
+    }]
   ],
   serviceWorker: true,
   themeConfig: {
-    nav: [
-      {
-        text: '章节',
-        items: themeConf.themeItems
-      }
-    ],
+    nav: [{
+      text: '章节',
+      items: themeConf.themeItems
+    }],
     serviceWorker: {
       updatePopup: {
         message: '发现新内容可用',
