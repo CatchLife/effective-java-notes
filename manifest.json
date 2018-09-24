@@ -1,0 +1,13 @@
+{
+  "name": "Effective Java Notes",
+  "short_name": "Effective Java Notes",
+  "icons": [{
+    "src": "/logo.jpg",
+    "sizes": "474x622",
+    "type": "image/jpg"
+  }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#3eaf7c"
+}
