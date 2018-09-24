@@ -33,6 +33,18 @@ var themeConf = (function name(params) {
         docs.forEach(docName => {
           its.push(docName.split('.')[0])
         })
+        var compare = function(x, y) {
+          var a = parseInt(x)
+          var b = parseInt(y)
+          if (a < b) {
+            return -1;
+          } else if (a > b) {
+            return 1;
+          } else {
+            return 0;
+          }
+        }
+        its.sort(compare)
         Contents.push({
           text: titles[i],
           dir: dirName,
@@ -108,12 +120,10 @@ module.exports = {
   ],
   serviceWorker: true,
   themeConfig: {
-    nav: [
-      {
-        text: '章节',
-        items: themeConf.themeItems
-      }
-    ],
+    nav: [{
+      text: '章节',
+      items: themeConf.themeItems
+    }],
     serviceWorker: {
       updatePopup: {
         message: '发现新内容可用',
